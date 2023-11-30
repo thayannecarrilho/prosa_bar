@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-font: 'Lora', serif;
+    --secudary-font: 'Montserrat', sans-serif;
+    --main-color: #F1EFEF;
+    --secudary-color: #CCC8AA;
+    --third-color: #7D7C7C;
+    --font-color: #191717;
+}
+
+body {
+    font-family: var(--main-font);
+    color: var(--font-color);
+}
+
+
+/* Menu de Navegação */
+#logo-menu {
+    width: 160px;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 3;
+    ;
+    min-width: 100vw;
+    background-color: var(--secudary-color);
+    min-height: 170px;
+    box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(59, 68, 78, 0.589);
+}
+
+#nav-bar {
+    position: absolute;
+    top: -500px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(59, 68, 78, 0.589);
+
+
+}
+
+#nav-bar.active {
+    top: 100%;
+    background-color: var(--secudary-color);
+    text-align: center;
+
+}
+
+#nav-bar li {
+    margin: 1rem;
+}
+
+#nav-bar a {
+    color: var(--font-color);
+    letter-spacing: 2px;
+}
+
+/* Fim do Menu de Navegação */
