@@ -34,10 +34,10 @@ body {
 #menu {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     position: fixed;
+    padding: 0 3rem;
     z-index: 3;
-    ;
     min-width: 100vw;
     background-color: var(--secudary-color);
     min-height: 170px;
@@ -52,15 +52,13 @@ body {
     display: flex;
     flex-direction: column;
     box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(59, 68, 78, 0.589);
-
-
 }
 
 #nav-bar.active {
     top: 100%;
     background-color: var(--secudary-color);
     text-align: center;
-
+    box-shadow: 2px 2px 5px rgba(59, 68, 78, 0.589) ;
 }
 
 #nav-bar li {
@@ -71,5 +69,115 @@ body {
     color: var(--font-color);
     letter-spacing: 2px;
 }
-
+ ul :nth-child(3){
+    background-color: var(--third-color);
+    padding: 1rem;
+    border-radius: 25px;
+}
+li #btn-login{
+    color: white;
+}
 /* Fim do Menu de Navegação */
+
+
+/* Inicio Banner Section Mobile*/
+.mobile{
+    background-color:#e7e7e7;
+    position: relative;
+    top:12rem;
+    padding: 1rem 1rem 0 1rem;
+    font-family: var(--secudary-font);
+    
+}
+.mobile h2{
+    font-size: 15px;
+    padding-bottom: 6px;
+}
+.mobile h2 span{
+    font-style: italic;
+}
+.mobile li{
+    padding-bottom: 1rem;
+}
+.mobile li span{
+    font-weight: bold;
+}
+/* Fim Banner Section Mobile*/
+
+
+/* Inicio Banner Section Desktop*/
+#banner{
+    display:none;
+}
+/* Fim Banner Section Desktop*/
+
+/* Section Descrição Letícia */
+.container-description{
+    display: flex;
+    position: relative;
+    top: 13rem;
+    margin: 1rem;
+    gap:1.5rem;
+    align-items: center;
+
+}
+#img-description{
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid var(--third-color);
+    box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(59, 68, 78, 0.589);
+}
+/* Fim Section Descrição Letícia */
+
+/*Section Carrossel de fotos  */
+
+
+/*Fim Section Carrossel de fotos  */
+@media (min-width:1000px) {
+    /* Inicio do Menu de Navegação */
+    #menu{
+        justify-content: space-around;
+        align-items: ;
+    }
+    #menu-icon{
+        display: none;
+    }
+    #nav-bar{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        top: 0;
+        box-shadow: none;
+        gap: 3rem;
+    }
+    ul :nth-child(3){
+        background-color: var(--third-color);
+        padding: 1rem 3rem;
+        border-radius: 25px;
+    }
+    li #btn-login{
+        color: white;
+    }
+    #nav-bar.active {
+        box-shadow: none;    
+        
+}
+/* Fim do Menu de Navegação */
+/* Inicio Banner Section Mobile*/
+.mobile{
+   display: none;
+}
+/* Fim Banner Section Mobile*/
+
+/* Inicio Banner Section  Desktop*/
+.desktop{
+   padding-top: 7rem;
+}
+#banner{
+    display: flex;
+    width: 100%;
+}
+/* Fim Banner Section Desktop */
+
+}
