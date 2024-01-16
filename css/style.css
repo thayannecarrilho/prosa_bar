@@ -23,12 +23,14 @@
 body {
     font-family: var(--main-font);
     color: var(--font-color);
+    
 }
 
 
 /* Menu de Navegação */
 #logo-menu {
-    width: 160px;
+    width: 120px;
+    height: 110px;
 }
 
 #menu {
@@ -40,7 +42,7 @@ body {
     z-index: 3;
     min-width: 100vw;
     background-color: var(--secudary-color);
-    min-height: 170px;
+    min-height: 90px;
     box-shadow: -3px -3px 7px #ffffff73, 2px 2px 5px rgba(59, 68, 78, 0.589);
 }
 
@@ -115,8 +117,7 @@ li #btn-login{
 .container-description{
     display: flex;
     position: relative;
-    top: 13rem;
-    margin: 1rem;
+    margin: 15rem 1rem 2rem 1rem;
     gap:1.5rem;
     align-items: center;
 
@@ -129,15 +130,111 @@ li #btn-login{
 }
 /* Fim Section Descrição Letícia */
 
-/*Section Carrossel de fotos  */
+/*Section Carrossel de fotos Mobile  */
+.sliderdesktop{
+    display: none;
+}
+.slidermobile{
+
+    margin: 0 auto;
+    width: 320px;
+    height:480px;
+    overflow: hidden;
+   
+}
+
+.slider-mobile{
+    width: 400%;
+    height: 480px;
+    display: flex;
+}
+.slider-mobile input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+}
+.slider-mobile img{
+    width:320px ;
+    height: 430px;
+     border-radius: 5%; 
+}
+
+.manual-navigation{
+    position:absolute;
+    width:320px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+    transition: .06s;
+}
+
+.manual-btn{
+    border: 2px solid var(--main-color);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: var(--main-color);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+.navigation-auto div{
+    border: 2px solid var(--main-color);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.navigation-auto{
+    position:absolute;
+    width: 320px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+    
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color:var(--main-color);
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color:var(--main-color);
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: var(--main-color);
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color:var(--main-color);
+}
 
 
-/*Fim Section Carrossel de fotos  */
+
+/*Fim Section Carrossel de fotos Mobile  */
 @media (min-width:1000px) {
     /* Inicio do Menu de Navegação */
     #menu{
         justify-content: space-around;
-        align-items: ;
+        height: 100px;              
     }
     #menu-icon{
         display: none;
@@ -150,6 +247,7 @@ li #btn-login{
         top: 0;
         box-shadow: none;
         gap: 3rem;
+        
     }
     ul :nth-child(3){
         background-color: var(--third-color);
@@ -164,6 +262,7 @@ li #btn-login{
         
 }
 /* Fim do Menu de Navegação */
+
 /* Inicio Banner Section Mobile*/
 .mobile{
    display: none;
@@ -177,7 +276,53 @@ li #btn-login{
 #banner{
     display: flex;
     width: 100%;
+    margin-bottom: 1rem;
 }
 /* Fim Banner Section Desktop */
 
+/* Section Descrição Letícia */
+.container-description{
+    margin-top:2rem;
+}
+/* Fim Section Descrição Letícia */
+
+/*  Section Carrossel de fotos Desktop */
+.slidermobile{
+    display: none;
+}
+.sliderdesktop{
+    display: block;
+    width: 70vw;
+    height: 80vh;
+    overflow: hidden;
+    margin: 2rem auto;
+}
+.slider-desktop{
+    width: 500%;
+    height: 80vh;
+    display: flex;
+}
+.slider-desktop input{
+    display: none;
+}
+.slide-desktop{
+    width: 75%;
+    position: relative;
+}
+.slider-desktop img{
+    width: 70vw;
+    height: 80vh;
+    border-radius: 5%;
+    display: flex;
+}
+.manual-navigation{
+    width: 70vw;
+    margin-top: 420px;  
+}
+.navigation-auto{    
+    width: 70vw;
+    margin-top: 420px; 
+}
+
+/*  Fim Section Carrossel de fotos Mobile */
 }
