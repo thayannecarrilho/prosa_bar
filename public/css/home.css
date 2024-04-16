@@ -29,8 +29,8 @@ body {
 /* HOME PAGE */
 /* Menu de Navegação */
 #logo-menu {
-    width: 120px;
-    height: 110px;
+    width: auto;
+    height: 200px;
 }
 
 #menu {
