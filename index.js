@@ -1,30 +1,23 @@
 const express = require('express');
 const pool = require('./model/database');
 
-const home = require('./routes/homeRoute')
-
+const home = require('./routes/prosaRoute');
 
 
 const app = express();
 
-
 app.use(express.static('public'));
 
-
 app.set('view engine', 'ejs');
-
 app.use(
     express.urlencoded({
         extended: false,
     }),
 );
 
-
 app.use(express.json());
 
-
-app.use('/', home)
-
+app.use('/', home);
 
 ///
 const port = 3000;

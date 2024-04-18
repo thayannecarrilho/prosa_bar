@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contrate.css">
+    <script src="js/home.js" defer></script>
+    <script src="https://kit.fontawesome.com/988a2714d4.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="img/svg" id="mug" href="../public/img/mug-saucer-solid (1).svg">
+    <title>Prosa Bar & Café - Contrate</title>
+</head>
+<body>
+    <form id="form-event" action="/festa" method="get">
+        <fieldset id="festa">
+            <legend>Contrate o <span>Prosa</span> para sua festa</legend>
+            <label>Nome</label>
+            <input class="nome" type="text">
+            <label>Celular</label>
+            <input class="cellphone" type="tel">
+
+            <label>Tipo de Serviço</label>
+            <div class="container-radio">
+                <label> Bar
+                    <input class="service-type" name="base" type="radio" value="Bar">
+                </label>
+
+                <label> Garçom
+                    <input class="service-type" name="base" type="radio" value="s">
+                </label>
+
+                <label>Cozinha
+                    <input class="service-type" name="base" type="radio" value="s">
+                </label>
+
+                <label>Todos
+                    <input class="service-type" name="base" type="radio" value="s">
+                </label>
+            </div>
+            <label>Data do Evento:</label>
+            <input class="data" type="date">
+            <label>Horário do Evento:</label><br />
+            <input class="horaInicio" type="time"><span> às </span>
+            <input class="horaFim" type="time">
+            <label>Quantidade de convidados</label>
+            <input type="number" class="number-guest">
+            <button onclick="enviaFormulario()">Enviar</button>
+        </fieldset>
+    </form>
+</body>
+</html>

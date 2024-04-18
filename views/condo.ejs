@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contrate.css">
+    <script src="js/home.js" defer></script>
+    <script src="https://kit.fontawesome.com/988a2714d4.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="img/svg" id="mug" href="../public/img/mug-saucer-solid (1).svg">
+    <title>Prosa Bar & Café - Contrate</title>
+</head>
+<body>
+    <form id="form-event" action="/condominio" method="get">
+        <fieldset id="condo">
+            <legend>Contrate o <span>Prosa</span> para seu Condomio</legend>
+            <label>Nome do Condominio</label>
+            <input class="nome" type="text">
+
+            <label>Endereço</label>
+            <input class="adress" type="text">
+            <label>Cidade</label>
+            <input class="city" type="text">
+            <label>CEP</label>
+            <input class="zipCode" type="number">
+            <label for="state">Estado</label>
+            <select name="state">
+                <option value="SP">SP</option>
+            </select>
+            <label>Nome do responsável/sindico</label>
+            <input class="resposible" type="text">
+            <label>Celular responsável/sindico</label>
+            <input class="cellphone" type="tel">
+            <label>Quantidade de Torres/Blocos</label>
+            <input class="towers" type="number">
+            <label>Quantidade de Apartamentos</label>
+            <input class="apartaments" type="number">
+            <label for="fisico">O condominio possui espaço fisico para o bar?</label>
+            <div class="container-radio">
+                <label> Sim
+                    <input class="service-type" name="fisico" type="radio" value="Sim">
+                </label>
+
+                <label> Não
+                    <input class="service-type" name="fisico" type="radio" value="Não">
+                </label>
+            </div>
+            <label for="fisico">O condominio possui espaço fisico para a cozinha?</label>
+            <div class="container-radio">
+                <label> Sim
+                    <input class="service-type" name="fisico" type="radio" value="Sim">
+                </label>
+
+                <label> Não
+                    <input class="service-type" name="fisico" type="radio" value="Não">
+                </label>
+            </div>
+            <label>Descreva um pouco sobre o local e como o funcionamento do Prosa Bar seria no seu
+                condominio</label>
+            <textarea></textarea>
+
+
+            <button onclick="enviaFormulario()">Enviar</button>
+        </fieldset>
+    </form>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
